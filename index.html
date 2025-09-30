@@ -69,11 +69,11 @@
       </div>
       <div class="affils"> University of Verona</div>
       <div class="badges">
-        <a class="badge" id="code" href="https://github.com/PietroMsn/Multilayer-Segmentation" target="_blank" rel="noopener"><img src='https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/github.svg' alt='github' height='20'> Code</a>
-        <a class="badge" id="code" href="https://github.com/PietroMsn/Scanned-Gim3D" target="_blank" rel="noopener"><img src='https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/github.svg' alt='github' height='20'> Dataset</a>
-        <a class="badge" href="https://www.sciencedirect.com/science/article/pii/S0097849325002341" target="_blank" rel="noopener">📄 Computers & Graphics</a>
-        <a class="badge" href="#method">🧠 Method</a>
-        <a class="badge" href="#results">🖼️ Results</a>
+        <a class="badge" id="code" href="https://github.com/PietroMsn/Multilayer-Segmentation" target="_blank" rel="noopener"><img src='https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/github.svg' alt='github' height='20'>Code</a>
+        <a class="badge" id="code" href="https://github.com/PietroMsn/Scanned-Gim3D" target="_blank" rel="noopener"><img src='https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/github.svg' alt='github' height='20'>Dataset</a>
+        <a class="badge" href="https://www.sciencedirect.com/science/article/pii/S0097849325002341" target="_blank" rel="noopener">📄Paper</a>
+        <a class="badge" href="#method">🧠Method</a>
+        <a class="badge" href="#results">🖼️Results</a>
       </div>
       <div class="teaser">
         <img src="assets/pipeline_dataset.jpg" alt="Project teaser image showing multilayer clothing segmentation" />
@@ -99,27 +99,19 @@ This dataset enables research on multilayer point cloud segmentation, including 
 
     <section id="method" class="section">
       <h2>Method</h2>
-      <div class="grid">
-        <div class="col-12 figure"><img src="assets/pipeline.jpg" alt="Pipeline diagram"></div>
-        <div class="col-12 panel">
-          <ol class="numlist">
-            <li><strong>Multilayer labeling.</strong> Predict layer memberships per point (body, garment types) including occluded regions.</li>
-            <li><strong>Feature heads.</strong> Use invariant features for class probabilities and confidences; use (optionally) equivariant features for geometric cues.</li>
-            <li><strong>Training data.</strong> Synthetic scans with multi-layer ground truth; evaluate on both synthetic and real scans.</li>
-          </ol>
-        </div>
-      </div>
+      <p class="lead">
+        We explore the most promising deep-learning-based segmentation methods that have been proposed for generic 3D point cloud segmentation and, in particular, we use them as feature extractors. Then, we propose different strategies to extend these neural network architectures to deal with multiple clothing layers.
+      </p>
+        <img src="assets/strategies.png" alt="Strategies" style="width:100%;max-width:700px;display:block;margin:0 auto;">
     </section>
 
     <section id="results" class="section">
       <h2>Results</h2>
-      <div class="grid">
-        <div class="col-6 figure"><img src="assets/result_01.jpg" alt="Result 1"></div>
-        <div class="col-6 figure"><img src="assets/result_02.jpg" alt="Result 2"></div>
-        <div class="col-6 figure"><img src="assets/result_03.jpg" alt="Result 3"></div>
-        <div class="col-6 figure"><img src="assets/result_04.jpg" alt="Result 4"></div>
-      </div>
-      <p style="margin-top:10px;color:var(--muted)">Add more results or link to a gallery page.</p>
+      <p class="lead">
+        Qualitative results on real scans with different strategies.
+      </p>
+        <img src="assets/results.png" alt="Strategies" style="width:100%;max-width:700px;display:block;margin:0 auto;">
+  
     </section>
 
     <section id="bibtex" class="section">
