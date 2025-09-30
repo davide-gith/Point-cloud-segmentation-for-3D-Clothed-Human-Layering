@@ -1,1 +1,189 @@
-Point cloud segmentation for 3D Clothed Human Layering
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Project Title — Conference Year</title>
+  <meta name="description" content="Project page for ..." />
+  <style>
+    :root {
+      --bg: #0b0c10;
+      --panel: #11131a;
+      --text: #e8ecf1;
+      --muted: #a9b0bb;
+      --accent: #60a5fa;
+      --accent-2: #34d399;
+      --border: #1f2330;
+      --link: #93c5fd;
+      --maxw: 1024px;
+    }
+    html, body { margin: 0; padding: 0; background: var(--bg); color: var(--text); font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji"; }
+    a { color: var(--link); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .wrap { max-width: var(--maxw); margin: 0 auto; padding: 24px; }
+    header { text-align: center; padding: 48px 0 24px; }
+    h1 { font-size: clamp(32px, 5vw, 48px); margin: 0 0 8px; letter-spacing: 0.2px; }
+    .subtitle { font-size: clamp(18px, 2.4vw, 24px); color: var(--muted); margin: 0 0 12px; }
+    .conf { font-weight: 600; color: var(--accent); margin: 8px 0 16px; }
+    .authors { margin: 12px auto 4px; display: flex; flex-wrap: wrap; gap: 8px 14px; justify-content: center; color: var(--text); }
+    .authors a { color: var(--text); border-bottom: 1px dotted var(--border); text-decoration: none; }
+    .affils { text-align: center; color: var(--muted); margin-top: 6px; }
+    .badges { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin: 20px 0 28px; }
+    .badge { background: linear-gradient(180deg, #1a2030, #131826); border: 1px solid var(--border); color: var(--text); padding: 10px 14px; border-radius: 12px; display: inline-flex; align-items: center; gap: 8px; font-weight: 600; }
+    .badge:hover { border-color: #2b3347; transform: translateY(-1px); transition: all .15s ease; text-decoration: none; }
+    .teaser { background: var(--panel); border: 1px solid var(--border); border-radius: 16px; overflow: hidden; }
+    .teaser img, .figure img { width: 100%; height: auto; display: block; }
+    .section { padding: 36px 0; }
+    .section h2 { font-size: clamp(22px, 3vw, 28px); margin: 0 0 14px; }
+    .lead { color: var(--muted); line-height: 1.6; font-size: 18px; }
+    .grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 16px; }
+    .col-12 { grid-column: span 12; }
+    .col-6 { grid-column: span 12; }
+    @media (min-width: 800px) { .col-6 { grid-column: span 6; } }
+    .panel { background: var(--panel); border: 1px solid var(--border); border-radius: 14px; padding: 16px; }
+    .figure { background: var(--panel); border: 1px solid var(--border); border-radius: 16px; overflow: hidden; }
+    .numlist { counter-reset: step; list-style: none; padding: 0; }
+    .numlist li { counter-increment: step; margin: 10px 0; padding-left: 36px; position: relative; line-height: 1.6; }
+    .numlist li::before { content: counter(step) "."; position: absolute; left: 0; top: 0; font-weight: 800; color: var(--accent-2); }
+    pre { background: #0e1117; color: #eaeef2; border: 1px solid var(--border); border-radius: 12px; padding: 14px; overflow-x: auto; }
+    code { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; font-size: 0.95em; }
+    .footer { color: var(--muted); border-top: 1px dashed var(--border); padding-top: 24px; margin-top: 24px; text-align: center; }
+    nav { position: sticky; top: 0; background: rgba(11,12,16,0.85); backdrop-filter: blur(8px); border-bottom: 1px solid var(--border); z-index: 10; }
+    nav .navwrap { max-width: var(--maxw); margin: 0 auto; display: flex; gap: 16px; align-items: center; padding: 10px 16px; }
+    nav a { color: var(--muted); font-weight: 600; }
+    nav a:hover { color: var(--text); }
+    .spacer { height: 6px; }
+  </style>
+</head>
+<body>
+  <!-- Minimal sticky nav -->
+  <nav>
+    <div class="navwrap">
+      <a href="#top">Project</a>
+      <a href="#video">Video</a>
+      <a href="#results">Results</a>
+      <a href="#method">Method</a>
+      <a href="#bibtex">BibTeX</a>
+      <a href="#code">Code</a>
+    </div>
+  </nav>
+  <div id="top" class="wrap">
+    <header>
+      <h1>Point Cloud Segmentation for 3D Clothed Human Layering</h1>
+      <p class="subtitle">A multilayer segmentation paradigm for clothed-human point clouds</p>
+      <p class="conf">3DOR 2025</p>
+      <div class="authors">
+        <!-- Replace links with actual profiles -->
+        <span><a href="#">Davide Garavaso</a><sup>1</sup></span>
+        <span><a href="#">Federico Masi</a><sup>1</sup></span>
+        <span><a href="#">Pietro Musoni</a><sup>1</sup></span>
+        <span><a href="#">Umberto Castellani</a><sup>1</sup></span>
+      </div>
+      <div class="affils"> <sup>1</sup> University of Verona (or your affiliation)</div>
+      <div class="badges">
+        <a class="badge" id="code" href="#" target="_blank" rel="noopener">💻 Code</a>
+        <a class="badge" href="https://arxiv.org/abs/2508.05531" target="_blank" rel="noopener">📄 arXiv</a>
+        <a class="badge" href="#video" rel="noopener">▶️ Video</a>
+        <a class="badge" href="#results">🖼️ Results</a>
+        <a class="badge" href="#method">🧠 Method</a>
+      </div>
+      <div class="teaser">
+        <!-- Replace with your teaser image -->
+        <img src="assets/teaser.jpg" alt="Project teaser image showing multilayer clothing segmentation" />
+      </div>
+    </header>
+
+    <section class="section">
+      <p class="lead">
+        <strong>Clothed Human Layering.</strong> Each 3D point may belong to multiple layers (e.g., body + garments). Our setup enables reasoning on both visible and occluded regions, providing richer supervision for downstream tasks like human digitization, virtual try-on, and reconstruction.
+      </p>
+    </section>
+
+    <section id="video" class="section">
+      <h2>Video Demonstration</h2>
+      <div class="panel">
+        <!-- Replace the src with your YouTube video ID -->
+        <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:12px;">
+          <iframe src="https://www.youtube.com/embed/VIDEO_ID" title="Project video" frameborder="0" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
+        </div>
+      </div>
+    </section>
+
+    <section id="results" class="section">
+      <h2>Results</h2>
+      <div class="grid">
+        <div class="col-6 figure"><img src="assets/result_01.jpg" alt="Result 1"></div>
+        <div class="col-6 figure"><img src="assets/result_02.jpg" alt="Result 2"></div>
+        <div class="col-6 figure"><img src="assets/result_03.jpg" alt="Result 3"></div>
+        <div class="col-6 figure"><img src="assets/result_04.jpg" alt="Result 4"></div>
+      </div>
+      <p style="margin-top:10px;color:var(--muted)">Add more results or link to a gallery page.</p>
+    </section>
+
+    <section id="method" class="section">
+      <h2>Method</h2>
+      <div class="grid">
+        <div class="col-12 figure"><img src="assets/pipeline.jpg" alt="Pipeline diagram"></div>
+        <div class="col-12 panel">
+          <ol class="numlist">
+            <li><strong>Multilayer labeling.</strong> Predict layer memberships per point (body, garment types) including occluded regions.</li>
+            <li><strong>Feature heads.</strong> Use invariant features for class probabilities and confidences; use (optionally) equivariant features for geometric cues.</li>
+            <li><strong>Training data.</strong> Synthetic scans with multi-layer ground truth; evaluate on both synthetic and real scans.</li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <section id="bibtex" class="section">
+      <h2>BibTeX</h2>
+      <pre><code>@inproceedings{YourKey2025Layering,
+  title     = {Point Cloud Segmentation for 3D Clothed Human Layering},
+  author    = {Garavaso, Davide and Masi, Federico and Musoni, Pietro and Castellani, Umberto},
+  booktitle = {3D Object Retrieval (3DOR) 2025},
+  year      = {2025},
+  note      = {Preprint available at arXiv:2508.05531}
+}</code></pre>
+    </section>
+
+    <section class="section">
+      <h2>Resources</h2>
+      <div class="grid">
+        <div class="col-6 panel">
+          <h3 style="margin-top:0">Code & Data</h3>
+          <ul>
+            <li><a href="#">GitHub Repository</a></li>
+            <li><a href="#">Dataset (if any)</a></li>
+            <li><a href="#">Pretrained models</a></li>
+          </ul>
+        </div>
+        <div class="col-6 panel">
+          <h3 style="margin-top:0">Links</h3>
+          <ul>
+            <li><a href="https://arxiv.org/abs/2508.05531" target="_blank" rel="noopener">Paper on arXiv</a></li>
+            <li><a href="#video">Video</a></li>
+            <li><a href="#results">Gallery</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <div class="footer">
+      <p>© 2025 Authors. This page is built with GitHub Pages. Feel free to reuse this template; add attribution if useful.</p>
+    </div>
+  </div>
+
+  <script>
+    // Smooth scroll for in-page links
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        const id = a.getAttribute('href').slice(1);
+        const el = document.getElementById(id);
+        if (el) {
+          e.preventDefault();
+          el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+  </script>
+</body>
+</html>
